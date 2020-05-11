@@ -1,0 +1,13 @@
+# 配置服务端口
+server:
+  port: 7003
+
+# 配置eureka相关
+eureka:
+  instance:
+    hostname: eureka7003 # eureka实例的名字
+  client:
+    register-with-eureka: false # 这个选项是是否把自己注册到eureka服务端，由于它自己就是服务端，选false
+    fetch-registry: false # 是否从注册中心拉取服务，由于它自己就是服务端，选false
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7004.com:7004/eureka/ # 设置Eureka Server的交互地址(注册地址)，用于服务检索和服务注册

@@ -13,6 +13,10 @@
         <module>spring-cloud-user-service-8001</module>
         <module>spring-cloud-user-consumer-80</module>
         <module>spring-cloud-eureka-server-7001</module>
+        <module>spring-cloud-eureka-cluster-server-7002</module>
+        <module>spring-cloud-eureka-cluster-server-7003</module>
+        <module>spring-cloud-eureka-cluster-server-7004</module>
+        <module>spring-cloud-user-service-8002-eureka-cluster</module>
     </modules>
 
     <!--使用dependencyManagement锁定依赖的版本 start-->
