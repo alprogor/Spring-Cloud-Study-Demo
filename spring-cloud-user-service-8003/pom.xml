@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-user-consumer-80</artifactId>
+    <artifactId>spring-cloud-user-service-8003</artifactId>
+
 
     <dependencies>
         <!--引入公共依赖包 start-->
@@ -30,22 +31,39 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
 
-        <!--增加eureka start-->
+        <!--引入web开发相关包 end-->
+
+        <!--增加eureka 客户端依赖 start-->
+        <!--旧版本的依赖：-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-eureka</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--增加eureka end-->
+        <!--增加eureka 客户端依赖 end-->
 
-        <!--增加ribbon依赖 start-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-            <!--旧版的需要去掉-netflix-->
-        </dependency>
-        <!--增加ribbon依赖 end-->
 
     </dependencies>
+
 
 </project>

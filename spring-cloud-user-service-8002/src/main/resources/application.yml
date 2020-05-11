@@ -1,0 +1,28 @@
+server:
+  port: 8002
+
+spring:
+  datasource:
+    # 配置数据源
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud02
+  application:
+    name: UserSerive # 多个同功能的服务使用应用名来注册,这个应用名你可以在eureka 中看到,它变成了服务名
+mybatis:
+  # 全局配置文件位置：
+  config-location: classpath:mybatis/mybatis-config.xml
+  # 映射文件位置：
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+# eureka配置:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka # 指定eureka 服务端交互地址
+  instance:
+    instance-id: UserService8002 # 当前服务实例名称,如果不指定,是主机名:服务名称:服务端口
+    prefer-ip-address: true # 是否使用IP地址作为当前服务的标识,有些是会使用主机号,你可以尝试注释看看效果
+#    由于拉取服务和是否把自己注册到eureka的都是默认true的,所以不需要配置

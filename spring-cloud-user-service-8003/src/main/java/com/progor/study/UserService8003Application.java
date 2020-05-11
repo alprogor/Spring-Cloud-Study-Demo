@@ -1,16 +1,14 @@
 package com.progor.study;
 
-import com.progor.config.MyConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
+
 
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "USERSERIVE", configuration = MyConfig.class)
-public class UserConsumer80Application {
+public class UserService8003Application {
     public static void main(String[] args) {
-        SpringApplication.run(UserConsumer80Application.class, args);
+        SpringApplication.run(UserService8003Application.class, args);
     }
 }
