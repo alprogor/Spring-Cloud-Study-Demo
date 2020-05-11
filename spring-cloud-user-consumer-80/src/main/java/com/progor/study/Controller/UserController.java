@@ -15,7 +15,11 @@ public class UserController {
     @Autowired
     private RestTemplate restTemplate;
     // 指定远程访问的URL，也就是服务提供者的URL
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+//    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    // 1.注释直接使用URL来调用服务的代码,
+    // 2.下面使用eureka来调用,下面的"http://USERSERIVE"的USERSERIVE是服务的名字,Eureka页面中你看过的
+    // 3.这样就从eureka中拉取到名为USERSERIVE的服务的列表,并从中选择一个服务实例调用
+    private static final String REST_URL_PREFIX = "http://USERSERIVE";
 
     @GetMapping("/user/{id}")
     public User getUser(@PathVariable Integer id) {

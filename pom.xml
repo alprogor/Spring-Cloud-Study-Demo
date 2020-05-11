@@ -12,11 +12,23 @@
         <module>spring-cloud-common-data</module>
         <module>spring-cloud-user-service-8001</module>
         <module>spring-cloud-user-consumer-80</module>
+        <module>spring-cloud-eureka-server-7001</module>
     </modules>
 
     <!--使用dependencyManagement锁定依赖的版本 start-->
     <dependencyManagement>
         <dependencies>
+            <!--锁定spring cloud版本 start-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--锁定spring cloud版本 end-->
+
+
             <!--由于此时没有了sping boot starter 作为parent工程，需要使用spring-boot-dependencies来达到相似效果-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
