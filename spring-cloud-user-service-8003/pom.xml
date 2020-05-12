@@ -75,6 +75,13 @@
         <!--增加hystrix依赖 end-->
 
 
+        <!--增加actuator start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--增加actuator end-->
+
     </dependencies>
 
 
