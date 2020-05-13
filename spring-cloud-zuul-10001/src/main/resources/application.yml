@@ -1,0 +1,24 @@
+server:
+  port: 10001
+
+spring:
+  application:
+    name: spring-cloud-zuul
+
+# 为了负载均衡之类的和拉取服务之类的，也需要配置eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: zuul-10001.com
+    prefer-ip-address: true
+
+# 配置zuul
+zuul:
+  #  prefix: /api
+  routes: # 配置路由
+    UserService:
+      serviceId: USERSERIVE # 服务名
+      path: /myuser/**  # 在本地用什么来映射,比如/user/list会映射成本地的/myuser/user/list
+#  ignored-services: '*'
