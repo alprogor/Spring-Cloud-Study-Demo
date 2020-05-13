@@ -23,6 +23,8 @@
         <module>spring-cloud-message-service-8005</module>
         <module>spring-cloud-hystrix-dashboard-9001</module>
         <module>spring-cloud-zuul-10001</module>
+        <module>spring-cloud-config-server-11000</module>
+        <module>spring-cloud-message-service-config-8006</module>
     </modules>
 
     <!--使用dependencyManagement锁定依赖的版本 start-->

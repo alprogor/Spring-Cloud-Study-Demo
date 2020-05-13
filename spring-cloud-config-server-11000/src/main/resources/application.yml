@@ -1,0 +1,13 @@
+server:
+  port: 11000
+
+spring:
+  application:
+    name:  spring-cloud-config-server
+  cloud: # 配置spring cloud config
+    config:
+      server:
+        git: # 使用git来拉取
+          uri: https://github.com/alprogor/spring-cloud-config-test.git #GitHub上面的git仓库名字
+          search-paths: messageservice
+          # 如果你不指定search-paths，那么默认是在根目录查找的，那么你的config文件需要放在根目录

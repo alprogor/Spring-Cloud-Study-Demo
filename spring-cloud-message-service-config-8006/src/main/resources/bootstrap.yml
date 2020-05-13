@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: spring-cloud-message-config-11000 #需要从github上读取的资源名称，注意没有yml后缀名
+      profile: test   #本次访问的配置项
+      label: master
+      uri: http://localhost:11000  # 访问11000的spring cloud来获取配置文件
+
+
